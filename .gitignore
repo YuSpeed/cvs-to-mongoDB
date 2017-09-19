@@ -1,0 +1,21 @@
+# Don't check auto-generated stuff into git
+coverage
+history
+lib
+lib-umd
+node_modules
+
+docs
+yarn-error.log
+
+# Cruft
+npm-debug.*
+.idea
+*.iml
+
+
+
+
+
+
+

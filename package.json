@@ -1,0 +1,85 @@
+{
+  "name": "yu-speed-csvToMongoDB",
+  "version": "0.1.0",
+  "description": "yu-speed-csvToMongoDB is a csv to MongoDB Command-line app",
+  "typings": "lib/index.d.ts",
+  "bin": {
+    "yuCsvToDB": "./lib/cli.js"
+  },
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest",
+    "watch": "jest --watch --notify",
+    "coverage": "rimraf coverage && jest --coverage",
+    "travis": "yarn run lint && yarn test",
+    "lint": "node_modules/.bin/tslint -c tslint.json src/**/*.ts test/**/*.ts",
+    "lint-fix": "node_modules/.bin/tslint -c tslint.json src/**/*.ts test/**/*.ts --fix ",
+    "docs": "rimraf docs && typedoc --name yu-speed-csvToMongoDB --readme README.md --module commonjs --out docs --target es6 --hideGenerator  src",
+    "docs-publish": "yarn run docs && gh-pages -d docs -t",
+    "build": "rimraf lib &&  tsc  && yarn test ",
+    "build:fast": "rimraf lib &&  tsc  ",
+    "build-prod": "yarn run build && yarn run docs-publish",
+    "prepublishOnly": "yarn run build-prod"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "cross-env": "^5.0.5",
+    "gh-pages": "^1.0.0",
+    "jest": "^21.0.1",
+    "rimraf": "^2.6.1",
+    "tslint": "^5.7.0",
+    "typedoc": "^0.8.0",
+    "typescript": "^2.5.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 98,
+        "branches": 70,
+        "functions": 98,
+        "lines": 98
+      }
+    },
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.ts$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "<rootDir>/tests/**/*.ts"
+    ]
+  },
+  "keywords": [
+    "functional",
+    "exchange",
+    "csv",
+    "mongoDB",
+    "YuSpeed"
+  ],
+  "author": "fastspeeed@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "mocoolka-algebraic": "^0.1.1",
+    "mocoolka-cli": "^0.1.0",
+    "mocoolka-function": "^0.1.7",
+    "mocoolka-sequence": "^0.1.1",
+    "mocoolka-tools-io": "^0.1.18",
+    "mocoolka-type": "^0.1.2"
+  },
+  "repository": "YuSpeed/cvs-to-mongoDB"
+}

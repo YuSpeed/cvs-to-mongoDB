@@ -1,0 +1,11 @@
+{
+  "hostname": "localhost",
+  "port": 27017,
+  "database": "users",
+  "collection": "ticks",
+  "username": "admin",
+  "password": "1",
+  "pattern": "f:/history/data/tick/*.csv",
+  "mongoimportPath": "D:/MongoDB/Server/3.4/bin/",
+  "backupPath": "f:/history/backup/tick"
+}

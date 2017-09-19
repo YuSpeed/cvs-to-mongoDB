@@ -1,0 +1,9 @@
+.idea
+coverage
+docs
+examples
+history
+lib
+lib-umd
+tests
+node_modules

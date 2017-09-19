@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+
+    "module": "commonjs",
+    "target": "es6",
+    "lib": ["es2015","es2016","es2017"],
+    "outDir": "lib",
+    "allowJs":false,
+    "declaration": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "removeComments": false,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "examples",
+    "history",
+    "coverage"
+  ]
+}
