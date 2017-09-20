@@ -129,9 +129,9 @@ yuCsvToDB
 yuCsvToDB -r
 ```
 
-## [API documentation](https://YuSpeeed.github.io/csvToMongoDB/)
+## [API documentation](https://YuSpeed.github.io/csv-to-mongodb/)
 
-YuSpeed csvToMongoDB is fully documented via inline JSDoc comments. [The docs are also available online](https://YuSpeeed.github.io/csvToMongoDB/). When using an IDE like Intellij IDEA or Webstorm the docs are available inline right inside your editor.
+YuSpeed csvToMongoDB is fully documented via inline JSDoc comments. [The docs are also available online](https://YuSpeed.github.io/csv-to-mongodb). When using an IDE like Intellij IDEA or Webstorm the docs are available inline right inside your editor.
 
 
 ## License
